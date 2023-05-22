@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Date of Birth</th>
+            <th>Physics Marks</th>
+            <th>Chemistry Marks</th>
+            <th>Maths Marks</th>
+            <th>Computer Science Marks</th>
+            <th>Total Percentage</th>
+        </tr>
+        {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.date_of_birth }}</td>
+                <td>{{ student.physics_marks }}</td>
+                <td>{{ student.chemistry_marks }}</td>
+                <td>{{ student.maths_marks }}</td>
+                <td>{{ student.computer_science_marks }}</td>
+                <td>{{ student.total_percentage|floatformat:2 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
